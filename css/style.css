@@ -1,5 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+:root{
+    --main-color: #e056fd;
+    --black:#090029;
+    --bg-color:#14074B;
+    --white:#fff;
+    --light-white:rgba(255,255,255,.8);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.3);
+    --border:.2rem solid rgba(255,255,255,.1);
+}
+
+body{
     font-family: "Montserrat Alternates", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width:1rem;
+}
+::-webkit-scrollbar-track{
+    background:transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--white);
+}
+
+body{
+    background: var(--black);
+}
+
+section{
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    position:fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .flex{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
