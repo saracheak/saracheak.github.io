@@ -53,3 +53,13 @@ section{
     align-items: center;
     justify-content: space-between;
 }
+
+.header .flex .navbar{
+    margin: 0 1.5rem;
+    font-size: 1.8rem;
+    color: var(--light-white);
+}
+
+.header .flex .navbar a{
+    color:var(--main-color)
+}
