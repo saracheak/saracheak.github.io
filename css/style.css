@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
 :root{
     --main-color: #e056fd;
@@ -17,7 +18,7 @@ body{
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: 9rem;
+    scroll-padding-top: 0;
     overflow-x: hidden;
 }
 
@@ -37,8 +38,16 @@ body{
 
 section{
     padding: 3rem 2rem;
+    color:var(--light-white);
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.home{
+    font-size: 2rem;
+    color: var(--main-color);
+    text-decoration: none;
+    position: relative;
 }
 
 .resume-btn{
@@ -55,6 +64,7 @@ section{
     position: relative;
     z-index: 1;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .resume-btn::before{
@@ -74,8 +84,21 @@ section{
     left:0;
 }
 
+.sidebar {
+  position: fixed;
+  top: 40%;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sidebar img {
+  width: 30px;
+}
+
 .header{
-    position:fixed;
+    position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
 }
@@ -84,7 +107,7 @@ section{
     padding: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .header .flex .navbar{
@@ -106,5 +129,133 @@ section{
 }
 
 .header .flex .resume-btn{
+    margin-top: 10;
+}
+
+#resume-btn{
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    z-index: 10000;
+    background: var(--main-color);
+
+}
+
+.hero{
+    color:var(--white);
+    padding-top: 20vh;
+}
+
+.hero .intro{
+    color:var(--white);
+    font-size:300%;
+    margin-top:10rem;
+    margin-bottom: 0.3rem;
+}
+
+.hero .name{
+    color:var(--main-color);
+    font-size:600%;
+    margin-top:0;
+    margin-bottom: 0.3rem;
+}
+
+.hero .subtitle{
     margin-top: 0;
+    color:var(--light-white);
+    font-size:300%;
+}
+
+.hero .description{
+    margin-top: 0;
+    color:var(--light-white);
+    font-size:200%;
+    margin: bottom 100px;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+}
+
+#about-me .title{
+    margin-top: 12rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    color:var(--white);
+    font-size:500%;
+}
+
+
+#about-me .about-wrapper {
+  display: flex;
+  align-items: flex-start; /* top-align */
+  justify-content: space-between;
+  gap: 3rem; /* spacing between text and image */
+  
+}
+
+#about-me .intro{
+    margin-top: 50;
+    color:var(--main-color);
+    font-size:200%;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    width: 400px;
+}
+
+#about-me .bio{
+    margin-top: 50;
+    color:var(--light-white);
+    font-size:200%;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    width: 500px;
+}
+
+#about-me .image img{
+    height: auto;
+    flex-wrap: wrap;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+
+#about-me .image-caption .arrow {
+  font-size: 1.6rem;
+  margin-right: 0.4rem;
+  transform:rotate(90deg);
+  color: var(--light-white);
+}
+
+#projects .title{
+    margin-top: 12rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    color:var(--white);
+    font-size:500%;
+    margin-bottom:5rem;
+}
+
+#projects .project-title{
+    font-family: "Montserrat Alternates", sans-serif;
+    color:var(--light-white);
+    font-size:200%;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-image img {
+    width: 100%;
+  }
 }
