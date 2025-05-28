@@ -210,37 +210,148 @@ section{
 
 #about-me .image img{
     height: auto;
-    flex-wrap: wrap;
     max-width: 300px;
     width: 100%;
     border-radius: 12px;
     box-shadow: var(--box-shadow);
 }
 
-#about-me .image-caption .arrow {
-  font-size: 1.6rem;
+.image-caption{
+  font-size: 1.3rem;
   margin-right: 0.4rem;
-  transform:rotate(90deg);
   color: var(--light-white);
+  text-decoration: none;
 }
 
-#projects .title{
-    margin-top: 12rem;
-    font-family: "Montserrat Alternates", sans-serif;
-    color:var(--white);
-    font-size:500%;
-    margin-bottom:5rem;
-}
-
-#projects .project-title{
-    font-family: "Montserrat Alternates", sans-serif;
-    color:var(--light-white);
-    font-size:200%;
-    margin-bottom: 2rem;
+.arrow{
+    transform:rotate(90deg);
 }
 
 
 
+/* Title */
+#projects .title {
+  margin-top: 12rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: var(--white);
+  font-size: 500%;
+  margin-bottom: 5rem;
+}
+
+/* Project Heading */
+#projects .project-title {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: var(--white);
+  font-size: 200%;
+  margin-bottom: 2rem;
+}
+
+/* Flex container for text+tag and image */
+#projects .project-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+#projects .text-and-tag {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#projects .project-description {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-size: 200%;
+    line-height: 1.6;
+    color: var(--light-white);
+}
+
+#projects .tag-row {
+  display: flex;
+  gap: 10rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+#projects .tag {
+  position: relative;
+  width: 80px;
+  flex-shrink: 0; /* Prevents shrinking on small screens */
+}
+
+#projects .tag img {
+  width: 100%;
+  height:40px;
+  display: block;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+#projects .tag-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Fira Code", monospace;
+  font-size: 0.75rem;
+  color: white;
+  text-align: center;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+#projects .container img {
+    height: 100px;
+    max-width: 150px;            /* Increase size */
+    transform: rotate(45deg); /* Rotate counterclockwise */
+}
+
+#projects .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#projects .image {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+}
+
+#projects .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+#projects .image-caption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--light-white);
+  text-align: center;
+}
+
+#projects .image-caption a {
+  text-decoration: none;
+  color: var(--light-white);
+  font-weight: 500;
+}
+
+#projects .image-caption a:hover {
+  text-decoration: underline;
+}
+
+
+.project-content.reverse {
+  flex-direction: row-reverse;
+}
 
 
 
@@ -257,5 +368,12 @@ section{
   .about-text,
   .about-image img {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects .project-content,
+  #projects .project-content.reverse {
+    flex-direction: column !important;
   }
 }
