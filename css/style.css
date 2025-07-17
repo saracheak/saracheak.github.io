@@ -174,6 +174,38 @@ section{
     font-optical-sizing: auto;
 }
 
+.hero p,
+.hero h1,
+.hero h3 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero .intro {
+  animation-delay: 0s;
+}
+
+.hero .name {
+  animation-delay: 0.8s;
+}
+
+.hero .subtitle {
+  animation-delay: 1.6s;
+}
+
+.hero .description {
+  animation-delay: 2.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 #about-me .title{
     margin-top: 12rem;
     font-family: "Montserrat Alternates", sans-serif;
@@ -243,6 +275,7 @@ section{
   font-family: "Montserrat Alternates", sans-serif;
   color: var(--white);
   font-size: 200%;
+  margin-top: 5rem;
   margin-bottom: 2rem;
 }
 
@@ -290,6 +323,7 @@ section{
   display: block;
   transform: rotate(45deg);
   transition: transform 0.3s ease;
+  
 }
 
 #projects .tag-text {
@@ -349,7 +383,7 @@ section{
 }
 
 
-.project-content.reverse {
+#projects .project-content.reverse {
   flex-direction: row-reverse;
 }
 
