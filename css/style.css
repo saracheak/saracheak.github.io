@@ -387,13 +387,13 @@ section{
   flex-direction: row-reverse;
 }
 
-a#ayre-link {
+a#demo-link {
   color:var(--main-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a#ayre-link:hover {
+a#demo-link:hover {
     color: var(--white);
 }
 
