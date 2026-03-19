@@ -259,9 +259,6 @@ section{
     transform:rotate(90deg);
 }
 
-
-
-/* Title */
 #projects .title {
   margin-top: 12rem;
   font-family: "Montserrat Alternates", sans-serif;
@@ -270,7 +267,6 @@ section{
   margin-bottom: 5rem;
 }
 
-/* Project Heading */
 #projects .project-title {
   font-family: "Montserrat Alternates", sans-serif;
   color: var(--white);
@@ -279,7 +275,6 @@ section{
   margin-bottom: 2rem;
 }
 
-/* Flex container for text+tag and image */
 #projects .project-content {
   display: flex;
   gap: 2rem;
@@ -397,6 +392,29 @@ a#demo-link:hover {
     color: var(--white);
 }
 
+#contact .title{
+    margin-top: 12rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    color:var(--white);
+    font-size:500%;
+}
+
+#contact .description{
+    margin-top: 50;
+    color:var(--main-color);
+    font-size:200%;
+    font-family: "Fira Code", monospace;
+}
+
+a#contact-link {
+  color:var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a#contact-link .hover{
+  color:#090029
+}
 
 
 @media (max-width: 768px) {
